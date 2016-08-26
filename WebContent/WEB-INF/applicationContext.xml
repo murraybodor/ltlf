@@ -1,0 +1,170 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-2.0.xsd">
+
+    <bean id="allocationService" class="ca.aeso.ltlf.server.service.AllocationServiceImpl">
+        <property name="dao" ref="allocationDao"/>
+        <property name="beanManager" ref="hibernateBeanManager"/>
+        <property name="codesTableDao">
+        	<ref local="codesTableDao"/>
+        </property>
+        <property name="commonService">
+        	<ref local="commonService"/>
+        </property>
+    </bean>
+    
+    <bean id="commonService" class="ca.aeso.ltlf.server.service.CommonServiceImpl">
+        <property name="dao" ref="commonDao"/>
+        <property name="beanManager" ref="hibernateBeanManager"/>
+        <property name="calendarDao" ref="calendarDao"/>
+    </bean>
+    <bean id="stagingService" class="ca.aeso.ltlf.server.service.StagingServiceImpl">
+        <property name="dao" ref="stagingDao"/>
+        <property name="beanManager" ref="hibernateBeanManager"/>
+    </bean>
+
+    <bean id="mpAnalysisService" class="ca.aeso.ltlf.server.service.MpAnalysisServiceImpl">
+        <property name="dao" ref="mpAnalysisDao"/>
+        <property name="beanManager" ref="hibernateBeanManager"/>
+    </bean>
+
+    <bean id="loadShapeService" class="ca.aeso.ltlf.server.service.LoadShapeServiceImpl">
+        <property name="loadShapeDao" ref="loadShapeDao"/>
+        <property name="stagingDao" ref="stagingDao"/>
+        <property name="beanManager" ref="hibernateBeanManager"/>
+    </bean>
+    
+    <bean id="codesTableService" class="ca.aeso.ltlf.server.service.CodesTableServiceImpl">
+        <property name="dao" ref="codesTableDao"/>
+        <property name="beanManager" ref="hibernateBeanManager"/>
+    </bean>
+    
+    <bean id="stagingDao" class="ca.aeso.ltlf.server.dao.StagingDaoImpl">
+    	<property name="dataSource" ref="dataSource"/>
+        <property name="sessionFactory" >
+        	<ref local="sessionFactory"/>
+        </property>
+    </bean>
+    
+    <bean id="allocationDao" class="ca.aeso.ltlf.server.dao.AllocationDaoImpl">
+        <property name="sessionFactory" >
+        	<ref local="sessionFactory"/>
+        </property>
+        <property name="commonDao">
+        	<ref local="commonDao"/>
+        </property>
+    </bean>
+    
+    <bean id="commonDao" class="ca.aeso.ltlf.server.dao.CommonDaoImpl">
+        <property name="sessionFactory" >
+        	<ref local="sessionFactory"/>
+        </property>
+    </bean>
+    
+    <bean id="mpAnalysisDao" class="ca.aeso.ltlf.server.dao.MpAnalysisDaoImpl">
+        <property name="sessionFactory" >
+        	<ref local="sessionFactory"/>
+        </property>
+    </bean>
+
+    <bean id="loadShapeDao" class="ca.aeso.ltlf.server.dao.LoadShapeDaoImpl">
+       	<property name="dataSource" ref="dataSource"/>
+        <property name="sessionFactory" >
+        	<ref local="sessionFactory"/>
+        </property>
+    </bean>
+
+    <bean id="codesTableDao" class="ca.aeso.ltlf.server.dao.CodesTableDaoImpl">
+        <property name="sessionFactory" >
+        	<ref local="sessionFactory"/>
+        </property>
+    </bean>
+
+    <bean id="calendarDao" class="ca.aeso.ltlf.server.dao.CalendarDaoImpl">
+        <property name="sessionFactory" >
+        	<ref local="sessionFactory"/>
+        </property>
+    </bean>
+    
+    <bean id="allocationTest" class="ca.aeso.ltlf.server.service.AllocationServiceTest">
+    	<property name="allocationService" ref="allocationService"/>
+    	<property name="sessionFactory" ref="sessionFactory" />
+    </bean>
+    
+	<bean id="pojoStore"
+     	class="net.sf.hibernate4gwt.core.store.stateless.StatelessPojoStore" />
+
+	<bean id="hibernateBeanManager"
+      	class="net.sf.hibernate4gwt.core.HibernateBeanManager">
+    	<property name="pojoStore" ref="pojoStore" />
+    	<property name="sessionFactory" ref="sessionFactory" />
+	</bean>
+
+	<bean id="sessionFactory" class="org.springframework.orm.hibernate3.annotation.AnnotationSessionFactoryBean">
+    	<property name="dataSource" ref="dataSource"/>
+	    <property name="annotatedClasses">
+	        <list>
+	            <value>ca.aeso.ltlf.model.MeasurementPoint</value>
+	            <value>ca.aeso.ltlf.model.MeasurementPointDetail</value>
+	            <value>ca.aeso.ltlf.model.GapAnalysis</value>
+	            <value>ca.aeso.ltlf.model.GapSummaryValue</value>
+	            <value>ca.aeso.ltlf.model.AnalysisDetail</value>
+	            <value>ca.aeso.ltlf.model.CodesTable</value>
+	            <value>ca.aeso.ltlf.model.Sector</value>
+	            <value>ca.aeso.ltlf.model.LoadShape</value>
+	            <value>ca.aeso.ltlf.model.LoadShapeSummary</value>
+	            <value>ca.aeso.ltlf.model.LoadShapeDetail</value>
+	            <value>ca.aeso.ltlf.model.Area</value>
+	            <value>ca.aeso.ltlf.model.LoadForecastSummary</value>
+	            <value>ca.aeso.ltlf.model.LoadForecastDetail</value>
+	            <value>ca.aeso.ltlf.model.Calendar</value>
+	            <value>ca.aeso.ltlf.model.Allocation</value>
+	            <value>ca.aeso.ltlf.model.AllocationComment</value>
+	            <value>ca.aeso.ltlf.model.AllocationForecastYear</value>
+	            <value>ca.aeso.ltlf.model.AllocationArea</value>
+	            <value>ca.aeso.ltlf.model.AllocationSector</value>
+	            <value>ca.aeso.ltlf.model.AllocationMp</value>
+	            <value>ca.aeso.ltlf.model.EnergyFactor</value>
+	            <value>ca.aeso.ltlf.model.SumUnitValues</value>
+	        </list>
+	    </property>
+	    <property name="hibernateProperties">
+	    	<props>
+	    	<prop key="hibernate.show_sql">false</prop>
+	        <prop key="hibernate.dialect">org.hibernate.dialect.Oracle10gDialect</prop>
+	        <prop key="hibernate.current_session_context_class">thread</prop>
+	        <prop key="hibernate.transaction.factory_class">org.hibernate.transaction.JDBCTransactionFactory</prop> 
+	       	<prop key="hibernate.cache.provider_class">org.hibernate.cache.EhCacheProvider</prop>
+	        </props>
+	    </property>
+	</bean>	
+
+	<bean id="transactionManager" class="org.springframework.orm.hibernate3.HibernateTransactionManager">
+		<property name="sessionFactory">
+		    <ref local="sessionFactory"/>
+		</property>
+	</bean>
+        
+	<!-- specify the java bean to bind the file upload as a byte array in the property 'commandClass" -->
+	<bean id="fileUploadController" class="ca.aeso.ltlf.server.service.FileUploadController">
+		<property name="commandClass" value="ca.aeso.ltlf.server.service.FileUploadBean"/>
+		<property name="calendarDao" >
+        	<ref local="calendarDao"/>
+        </property>
+	</bean>
+	<bean class="org.springframework.web.servlet.handler.SimpleUrlHandlerMapping">
+	    <property name="mappings">
+	        <value>
+	            /**/fileupload.smvc=fileUploadController
+	        </value>
+	    </property>
+	</bean>
+	<!-- this bean is how spring mvc detects multipart form post -->
+	<!-- commons-fileupload jar is required for this bean to work -->
+	<bean id="multipartResolver" class="org.springframework.web.multipart.commons.CommonsMultipartResolver">
+		<property name="maxUploadSize" value="50000000"/>
+	</bean>
+	
+</beans>
+

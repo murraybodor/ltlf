@@ -1,0 +1,62 @@
+<html>
+<head>
+	<style type="text/css">
+		body {
+		  background-color: white;
+		  font-family: Arial, sans-serif;
+		  font-size: smaller;
+		  margin: 20px 20px 20px 20px;
+		}
+		.label {
+		  font-size: smaller;
+		  white-space: nowrap;  
+		}
+		.title {
+		  font-size: 125%;
+		  font-weight: bold;
+		  white-space: nowrap; 	 
+		}
+		.hr {
+		  border: 0;
+		  color: #000099;
+		  background-color: #000099;
+		  height: 10px;
+		}
+	</style>
+	<title>Long Term Load Forecasting - Login</title>
+</head>
+<body bgcolor="white">
+<table border="0" cellspacing="5" width="100%">
+	<tr valign="center">
+		<td width="10%" align="left"><img src="/ltlf/images/logo.gif" alt="AESO" /></td>
+	    <td align="left" class="title">Long Term Load Forecasting - Login</td>
+    </tr>
+</table>
+<hr class="hr">
+<form name="login" method="POST" action="j_security_check">
+  <table border="0" cellspacing="5" width="100%">
+    <tr>
+      <th class="label" width="25%" align="right">Username:</th>
+      <td align="left"><input type="text" name="j_username"></td>
+    </tr>
+    <tr>
+      <th class="label" width="25%" align="right">Password:</th>
+      <td align="left"><input type="password" name="j_password"></td>
+    </tr>
+    <tr>
+      <td colspan="2">&nbsp;</td>
+    </tr>
+    <tr>
+      <td>&nbsp;</td>
+      <td align="left" ><input type="submit" value="Login"></td>
+    </tr>
+  </table>
+</form>
+<hr class="hr">
+<script language="JavaScript">
+<!--
+document.login.j_username.focus();
+//-->
+</script>
+</body>
+</html>

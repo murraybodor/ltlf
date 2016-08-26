@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE log4j:configuration SYSTEM "http://logging.apache.org/log4j/docs/api/org/apache/log4j/xml/log4j.dtd">
+<!--
+ *
+ * Copyright: Copyright (c) 2003 Alberta Electric System Operator
+ *
+ * <p>Title: log4j.xml</p>
+ * <p>Description: Log4J Configuration File</p>
+-->
+<log4j:configuration xmlns:log4j="http://jakarta.apache.org/log4j/">
+  <!-- Supported Appenders -->
+  <appender name="CONSOLE" class="org.apache.log4j.ConsoleAppender">
+	<param name="Target" value="System.out" />  
+    <layout class="org.apache.log4j.PatternLayout">
+	      <param name="ConversionPattern" value="[%t] %d %-5p - %m%n" />
+    </layout>
+  </appender>
+  
+  <!-- Category configuration -->
+   <category name="com.oracle">
+    <priority value="ERROR"/>
+  </category>
+  <category name="org.apache">
+    <priority value="ERROR"/>
+  </category>
+   <category name="org.hibernate">
+    <priority value="ERROR"/>
+  </category>
+  <category name="org.springframework">
+    <priority value="ERROR"/>
+  </category>
+   <category name="net.sf">
+    <priority value="ERROR"/>
+  </category>
+  <category name="ca.aeso.ltlf.server.service">
+    <priority value="DEBUG"/>
+  </category>
+  <category name="ca.aeso.ltlf.server.dao">
+    <priority value="DEBUG"/>
+  </category>
+  <!-- Root configuration -->
+  <root>
+    <priority value="INFO"/>
+    <appender-ref ref="CONSOLE"/>
+  </root>
+</log4j:configuration>

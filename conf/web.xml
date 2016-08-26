@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app version="2.4" xmlns="http://java.sun.com/xml/ns/j2ee"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://java.sun.com/xml/ns/j2ee http://java.sun.com/xml/ns/j2ee/web-app_2_4.xsd">
+
+  <display-name>ltlf</display-name>
+  
+	<context-param>
+	     <param-name>contextConfigLocation</param-name>
+	     <param-value>
+		     /WEB-INF/applicationContext.xml
+		     /WEB-INF/datasourceContext.xml
+	     </param-value>
+	</context-param>
+
+    <!-- Spring Open Session In View Pattern filter -->
+    <filter>
+       <filter-name>hibernateFilter</filter-name>
+            <filter-class>
+              org.springframework.orm.hibernate3.support.OpenSessionInViewFilter
+            </filter-class>
+    </filter>
+
+	<servlet>
+		<servlet-name>context</servlet-name>
+		<servlet-class>org.springframework.web.context.ContextLoaderServlet</servlet-class>
+		<load-on-startup>1</load-on-startup>
+	</servlet>
+	<servlet>
+		<servlet-name>LtlfService</servlet-name>
+		<servlet-class>ca.aeso.ltlf.server.service.LtlfServiceImpl</servlet-class>
+		<init-param>
+			<description>set true to open a new window on the client side to display errors</description>
+			<param-name>debug</param-name>
+			<param-value>false</param-value>
+		</init-param>
+		<load-on-startup>2</load-on-startup>
+	</servlet>
+	<servlet>
+      <servlet-name>DisplayChart</servlet-name>
+      <servlet-class>org.jfree.chart.servlet.DisplayChart</servlet-class>
+    </servlet>
+  	<servlet-mapping>
+		<servlet-name>LtlfService</servlet-name>
+		<url-pattern>/ltlf.service</url-pattern>
+	</servlet-mapping>
+   <servlet-mapping>
+        <servlet-name>DisplayChart</servlet-name>
+        <url-pattern>/displayChart</url-pattern>
+    </servlet-mapping>	
+	
+	
+	<welcome-file-list>
+		<welcome-file>index.html</welcome-file>
+	</welcome-file-list>	
+
+	<filter-mapping>
+		<filter-name>hibernateFilter</filter-name> 
+		<url-pattern>/*</url-pattern> 
+	</filter-mapping>
+
+	<security-constraint>
+		<web-resource-collection>
+			<web-resource-name>Secure Resources</web-resource-name>
+  			<url-pattern>/Ltlf.html</url-pattern>
+			<url-pattern>/index.html</url-pattern>
+		</web-resource-collection>
+		<auth-constraint>
+			<role-name>LtlfUser</role-name>
+		</auth-constraint>
+	</security-constraint>
+	<login-config>
+		<auth-method>FORM</auth-method>
+		<form-login-config>
+			<form-login-page>/login.html</form-login-page>
+			<form-error-page>/loginerror.html</form-error-page>
+		</form-login-config>
+	</login-config>
+	<security-role>
+		<description>LTLF web user</description>
+		<role-name>LtlfUser</role-name>
+	</security-role>
+	<session-config>
+  		<session-timeout>300</session-timeout>
+	</session-config>
+
+  
+</web-app>

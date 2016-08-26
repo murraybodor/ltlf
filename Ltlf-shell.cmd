@@ -1,0 +1,1 @@
+@java -cp "%~dp0\src;%~dp0\bin;%~dp0\WebContent\WEB-INF\lib\gwt-user.jar;%~dp0\WebContent\WEB-INF\lib\gwt-dev-windows.jar" com.google.gwt.dev.GWTShell -noserver -out "%~dp0\www" %* ltlf/Ltlf.html -port 8888

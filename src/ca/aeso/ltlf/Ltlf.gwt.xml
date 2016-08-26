@@ -1,0 +1,28 @@
+<module>
+
+	<source path="client"/>
+	<source path="rpc"/>
+	<public path="public"/>
+	<source path="model"/>
+
+	<!-- Inherit the core Web Toolkit stuff.                  -->
+	<inherits name='com.google.gwt.user.User'/>
+	<inherits name="com.google.gwt.i18n.I18N"/>
+	<inherits name='net.sf.hibernate4gwt.Hibernate4Gwt'/>
+	<!-- Inherit the GWTExt Toolkit library configuration.	  -->
+	<inherits name='com.gwtext.GwtExt' />
+	<!-- for using RequestBuilder -->
+	<inherits name="com.google.gwt.http.HTTP"/>
+	
+	<!-- Specify the app entry point class.                   -->
+	<entry-point class="ca.aeso.ltlf.client.Ltlf"/>
+  
+  	<servlet path="/ltlf.service" class="ca.aeso.ltlf.server.service.LtlfServiceImpl"/>
+  	<servlet path="/displayChart" class="org.jfree.chart.servlet.DisplayChart"/>
+
+	<stylesheet src="js/ext/resources/css/ext-all.css" />
+	<!-- gray theme -->
+	<stylesheet src="js/ext/resources/css/xtheme-gray.css" />
+	<script src="js/ext/adapter/ext/ext-base.js" />
+	<script src="js/ext/ext-all.js" />
+</module>

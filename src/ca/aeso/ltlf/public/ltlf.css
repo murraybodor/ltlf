@@ -1,0 +1,1028 @@
+/*****************************
+ LTLF CSS
+******************************/
+body {
+	background-color: white;
+	font-family: Arial, sans-serif;
+	font-size: smaller;
+	margin: 0px 0px 0px 0px;
+	overflow: hidden;
+}
+
+.ltlfHeaderPanel
+{
+	background-color: white;
+}
+.logo {
+	width: 70px;
+	height: 70px;
+}
+.ltlfTitleText
+{
+	background-color: white;
+	font-size: 20px;
+	font-weight: bold;
+}
+
+.ltlfNormalText
+{
+	font-family: Arial;
+	font-size: 12px;
+}
+
+.ltlfNormalBoldText
+{
+	font-family: Arial;
+	font-size: 12px;
+	font-weight: bold;
+}
+.ltlfNormalBoldLink
+{
+	font-family: Arial;
+	font-size: 12px;
+	font-weight: bold;
+    text-decoration: underline;
+    color: blue;	
+    cursor: pointer;
+}
+
+.ltlfWarningText
+{
+	font-family: Arial;
+	font-size: 12px;
+	color: red;
+}
+.ltlfWarningBoldText
+{
+	font-family: Arial;
+	font-size: 12px;
+	font-weight: bold;
+	color: red;
+}
+
+.ltlfTabContentPanel
+{
+	padding: 10px!important;
+}
+.ltlfTooltip
+{
+	font-family: Arial;
+	font-size: 12px;
+	font-weight: bold;
+	background-color: #e8eef7;
+	border: solid 1px grey;
+}
+
+/* MP analysis  */
+.mpAnalysisPanel
+{
+	padding-top: 3px;
+}
+.mpAnalysisBodyPanel
+{
+	padding-top: 3px;
+}
+.mpAnalysisGraphControlPanel td
+{
+	padding-left: 5px;
+}
+.graphHeaderTable td
+{
+	padding: 3px;
+}
+.dateButton {
+	border: none;
+	background: #f5f5f5 url("images/calendar.gif") no-repeat left center;
+	color: darkblue;
+	cursor: pointer;
+	padding-left: 16px !important;
+}
+.fixPanel
+{
+	width: 1050px;
+	height: 200px;
+	padding: 3px;
+	border: 2px solid #87b3ff;
+}
+.coarseFixPanel
+{
+	width: 485px;
+	height: 105px;
+	padding: 5px;
+    background-color: #c0c0c0;
+}
+.smoothPanel
+{
+	width: 400px;
+	height: 105px;
+	padding: 5px;
+    background-color: #c0c0c0;
+}
+.fineFixPanel
+{
+	width: 210px;
+	height: 580px;
+	padding: 5px;
+    background-color: #c0c0c0;
+}
+.fineFixTable
+{
+	width: 210px;
+	height: 580px;
+	padding: 3px;
+    background-color: #c0c0c0;
+	font-family: Arial;
+	font-size: 10px;
+}
+.fineFixScrollPanel
+{
+	width: 203px;
+	height: 540px;
+	border: 2px solid #000000;
+}
+.fineFixLoadTable
+{
+	padding: 3px;
+    background-color: #c0c0c0;
+	font-family: Arial;
+	font-size: 10px;
+	
+}
+.fineFixLoadTable td
+{
+	white-space: nowrap;
+}
+.fineFixLoadTableHeader td
+{
+	white-space: nowrap;
+    background-color: #E6E6FA;
+	font-weight: bold;
+    font-family: Arial;
+	font-size: 10px;
+}
+/* Edit Load shape */
+.editLoadShapeMainPanel
+{
+	width: 1200px;
+}
+.editLoadShapeMainPanel td
+{
+}
+.editLoadShapeHeaderPanel td
+{
+	padding-top: 3px;
+	padding-left: 5px;
+}
+.editLoadShapeLoadShapeChartPanel {
+	width: 1200px;
+	border: solid 2px grey;
+}
+.editLoadShapeHourlyShapeChartPanel {
+	width: 1200px;
+	border: solid 2px grey;
+}
+.editLoadShapeGraphControlPanel td
+{
+	padding-left: 5px;
+}
+.editLoadShapeButtonPanel td
+{
+	padding-left: 5px;
+}
+.editLoadShapeBatchOverridePanel
+{
+	width: 290px;
+	height: 120px;
+	padding: 5px;
+    background-color: #c0c0c0;
+}
+.editLoadShapeHourlyShapeControlPanel td
+{
+	padding-top: 3px;
+	padding-right: 3px;
+}
+.editLoadShapeOffsetPanel
+{
+	width: 290px;
+	height: 110px;
+	padding: 5px;
+    background-color: #c0c0c0;
+}
+.editLoadShapeCopyPanel
+{
+	width: 290px;
+	height: 70px;
+	padding: 5px;
+    background-color: #c0c0c0;
+}
+.editLoadShapeNotesPanel
+{
+	width: 290px;
+	height: 125px;
+	padding: 5px;
+    background-color: #c0c0c0;
+}
+
+
+/* date picker styles */
+.goog-date-picker {
+	border: 1px solid black;
+	text-align: center;
+	vertical-align: middle;
+	background-color: #d0d0d0;
+}
+.goog-date-picker .grid {
+	font: menu;
+	border-collapse: collapse;
+}
+.goog-date-picker .grid td {
+	border-width: 1px;
+	padding: 0px;
+	border-style: solid;
+	border-color: white;
+	height: 20px;
+	width: 4ex;
+}
+.goog-date-picker .week-names {
+	color: gray;
+	text-align: center;
+	font-size: 0.8em;
+}
+.goog-date-picker .week-numbers {
+	color: gray;
+	text-align: center;
+}
+.goog-date-picker .control {
+	font: san-serif;
+	font-size: 12pt;
+	text-align: center;
+	padding: 2px 2px 2px 2px;
+	margin: 0px 1px 0px 1px;
+}
+.goog-date-picker .title {
+	border: 1px solid gray;
+	background: buttonface;
+	font: san-serif;
+	text-align: center;
+	vertical-align: middle;
+	width: 8ex;
+	font-size: 10pt;
+	padding: 1px 2px 1px 2px;
+}
+.goog-date-picker .control-today {
+	border: 1px solid gray;
+	background: buttonface;
+	font: san-serif;
+	text-align: center;
+	vertical-align: middle;
+	width: 25ex;
+	font-size: 10pt;
+}
+.goog-date-picker .control-menu {
+	margin: 0px 1px 0px 1px;
+}
+.goog-date-picker .control-block {
+	margin: 1px 1px 1px 1px;
+}
+.goog-date-picker .control-pane {
+	margin: 1px 1px 1px 1px;
+}
+.goog-date-picker .control-submenu {
+	font: menu;
+}
+.goog-date-picker .weekday {
+	text-align: center;
+	vertical-align: middle;
+	font: menu;
+}
+.goog-date-picker .weekend-start {
+	background-color: rgb(255, 204, 204);
+	text-align: center;
+	vertical-align: middle;
+	font: menu;
+}
+.goog-date-picker .weekend-end {
+	background-color: rgb(255, 204, 204);
+	text-align: center;
+	vertical-align: middle;
+	font: menu;
+	color: red;
+}
+.goog-date-picker .today {
+	font: menu;
+	font-weight: bold !important;
+}
+.goog-date-picker .selected {
+	font: menu;
+	background-color: rgb(204, 204, 255);
+	color: blue;
+}
+.goog-date-picker .special {
+	font-weight: bold !important;
+	background: #FF6347;
+}
+.goog-date-picker .other-month {
+	filter: Alpha(Opacity = 30);
+	opacity: 0.3;
+}
+.gwt-SuggestBoxPopup {
+    border: 2px solid #87b3ff;
+    background: buttonface;
+	font-size: 10pt;
+}
+.gwt-SuggestBoxPopup .item {
+	background: buttonface;
+    padding: 2px;
+	font-size: 10pt;
+}
+.gwt-SuggestBoxPopup .item-selected {
+    background-color: #87b3ff;
+    padding: 2px;
+	font-size: 10pt;
+}
+/* tabs */
+.gwt-TabPanel {
+	margin-top: 4px;
+	margin-bottom: 4px;
+}
+
+.gwt-TabPanelBottom {
+	
+}
+
+.gwt-TabBar {
+	
+}
+
+.gwt-TabBar .gwt-TabBarFirst {
+	
+}
+
+.gwt-TabBar .gwt-TabBarRest {
+	
+}
+
+.gwt-TabBar .gwt-TabBarItem {
+	padding: 4px;
+	cursor: pointer;
+	cursor: hand;
+	font-size: 80%;
+	background-color: #e8eef7;
+	border-bottom: 2px solid white;
+	margin-right: 2px;
+}
+
+.gwt-TabBar .gwt-TabBarItem-selected {
+	padding: 4px;
+	font-weight: bold;
+	cursor: default;
+	font-size: 80%;
+	background-color: #d0d0d0;
+	border-bottom: 2px solid #d0d0d0;
+	margin-right: 2px;
+}
+
+/*****************************
+          Dialogs
+******************************/
+.dialog {
+	font-size: smaller;
+	background-color: #e8eef7;
+	border: solid 1px #000099;
+}
+
+.dialogMainPanel {
+	padding-top: 0;
+	padding-bottom: 5px;
+}
+
+.dialogTitleBar {
+	padding-top: 0;
+	background-color: #000099;
+	width: 100%;
+}
+
+.dialogTitleLabel {
+	font-size: smaller;
+	color: #ffffff;
+	font-weight: bold;
+	white-space: nowrap;
+	padding: 5px 5px 5px 5px;
+}
+
+.dialogContentLabel {
+	font-size: smaller;
+	padding: 5px 5px 5px 5px;
+}
+
+.dialogButton {
+	width: 50px;
+}
+
+.commentTextArea {
+	font-size: smaller;
+	height: 300px;
+	width: 600px;
+	padding: 5px 5px 5px 5px;
+}
+
+
+/*****************************
+          Editable label
+******************************/
+.editableLabel-textBox {
+	width: 60px;
+	height: 20px;
+	font-family: arial;
+	border: 2px solid #333;
+
+	/* Remove to display buttons to the right of the textbox */
+	display: block;
+}
+
+.editableLabel-textArea {
+	width: 200px;
+	height: 100px;
+	font-family: arial;
+	border: 2px solid #333;
+
+	/* Remove to display buttons to the right of the textbox */
+	display: block;
+}
+
+.editableLabel-label {
+	font-family: Arial;
+	font-size: 12px;
+}
+
+.scrollGridHeader
+{
+	overflow: hidden;
+}
+
+.scrollGridHeaderContainer
+{
+	position: relative;
+}
+
+.add-icon {
+	background-image: url( images/add.gif ) !important;
+}
+
+/* system allocation editor */
+
+.sae-scroll-grid
+{
+	border-style: solid;
+	border-color: silver;
+	border-width: 1px;
+	border-collapse: collapse;
+}
+
+.sae-scroll-grid td
+{
+	height: 26px;
+	border-style: solid;
+	border-width: 1px;
+	padding: 3px;
+	text-align: center;
+	background-color: #F2F2F2;
+}
+
+.sae-scroll-grid td.forecast-year div
+{
+	width: 80px;
+	padding: 0px;
+	margin: 0px;
+	overflow: hidden;
+}
+
+.sae-scroll-grid td.total-energy div
+{
+	width: 110px;
+	padding: 0px;
+	margin: 0px;
+	overflow: hidden;
+}
+
+.sae-scroll-grid td.customer-sector div
+{
+	width: 70px;
+	padding: 0px;
+	margin: 0px;
+	overflow: hidden;
+}
+
+.sae-scroll-grid td.input-cell
+{
+	background-color: white;
+}
+
+.sae-scroll-grid td.input-cell div
+{
+	width: 70px;
+	padding: 0px;
+	margin: 0px;
+	overflow: hidden;
+}
+
+.sae-scroll-grid td.input-cell div .input-field
+{
+	width: 70px;
+	height: 
+	padding: 0px;
+	margin: 0px;
+	border-style: none;
+	border-width: 0px;
+}
+
+
+
+
+/* MP detail(by date) allocation editor */
+
+.mpda-grid
+{
+	width: 498px;
+	border-style: solid;
+	border-color: silver;
+	border-width: 1px;
+	border-collapse: collapse;
+}
+
+.mpda-grid td
+{
+	height: 26px;
+	border-style: solid;
+	border-width: 1px;
+	padding: 3px;
+	text-align: center;
+	background-color: #F2F2F2;
+}
+
+.mpda-grid td.editable
+{
+	background-color: white;
+}
+
+/* mp allocation editor */
+.mpae-header-panel td
+{
+	padding-top: 3px;
+	padding-left: 5px;
+}
+
+.mpae-scroll-grid
+{
+	border-style: solid;
+	border-color: silver;
+	border-width: 1px;
+	border-collapse: collapse;
+}
+
+.mpae-scroll-grid td
+{
+	height: 26px;
+	border-style: solid;
+	border-width: 1px;
+	padding: 0px;
+	text-align: center;
+	background-color: #F2F2F2;
+}
+
+.mpae-scroll-grid td.fixed-header-cell
+{
+}
+
+.mpae-scroll-grid td.fixedheader-cell div
+{
+	width: 240px;
+	height: 78px;
+	padding: 0px;
+	margin: 0px;
+	overflow: hidden;
+}
+
+.mpae-fixed-header-layout-grid
+{
+	border-style: none;
+	border-color: silver;
+	border-width: 1px;
+	border-collapse: collapse;
+}
+
+.mpae-fixed-header-layout-grid td.mp-alloc-year-header div
+{
+	width: 80px;
+	padding: 3px;
+	margin: 0px;
+	overflow: hidden;
+}
+
+.mpae-fixed-header-layout-grid td.mp-alloc-year div
+{
+	height: 52px;
+	width: 80px;
+	padding: 3px;
+	margin: 0px;
+	overflow: hidden;
+}
+
+.mpae-fixed-header-layout-grid td.mp-alloc-total div
+{
+	width: 110px;
+	padding: 3px;
+	margin: 0px;
+	overflow: hidden;
+}
+
+.mpae-fixed-header-layout-grid td.mp-alloc-percent-total div
+{
+	width: 50px;
+	height: 52px;
+	padding: 3px;
+	margin: 0px;
+	overflow: hidden;
+}
+
+.mpae-fixed-header-layout-grid td.mp-alloc-energy-total div
+{
+	width: 110px;
+	height: 52px;
+	padding: 3px;
+	margin: 0px;
+	overflow: hidden;
+}
+
+.mpae-scroll-grid td.header-cell
+{
+	height: 78px;
+}
+
+.mpae-scroll-grid td.header-cell div
+{
+	width: 108px;
+	padding: 0px;
+	margin: 0px;
+	overflow: hidden;
+}
+
+.mpae-header-layout-grid
+{
+	border-style: none;
+	border-color: silver;
+	border-width: 1px;
+	border-collapse: collapse;
+}
+
+.mpae-header-layout-grid td.percentage-cell div
+{
+	width: 44px;
+	padding: 3px;
+	margin: 0px;
+	overflow: hidden;
+}
+
+.mpae-header-layout-grid td.peak-cell div
+{
+	width: 64px;
+	padding: 3px;
+	margin: 0px;
+	overflow: hidden;
+}
+
+.mpae-row-header-layout-grid
+{
+	border-style: none;
+	border-color: silver;
+	border-width: 1px;
+	border-collapse: collapse;
+}
+
+.mpae-row-header-layout-grid td.mp-alloc-year div
+{
+	height: 52px;
+	width: 80px;
+	padding: 3px;
+	margin: 0px;
+	overflow: hidden;
+}
+
+.mpae-row-header-layout-grid td.mp-alloc-percent-total div
+{
+	width: 50px;
+	height: 52px;
+	padding: 3px;
+	margin: 0px;
+	overflow: hidden;
+}
+
+.mpae-row-header-layout-grid td.mp-alloc-energy-total div
+{
+	width: 110px;
+	height: 52px;
+	padding: 3px;
+	margin: 0px;
+	overflow: hidden;
+}
+
+.mpae-scroll-grid td.input-cell
+{
+	height: 52px;
+}
+
+.mpae-scroll-grid td.input-cell div
+{
+	width: 108px;
+	padding: 0px;
+	margin: 0px;
+	overflow: hidden;
+}
+
+.mpae-input-layout-grid
+{
+	border-style: none;
+	border-color: silver;
+	border-width: 1px;
+	border-collapse: collapse;
+}
+
+.mpae-input-layout-grid td
+{
+	background-color: white;
+}
+
+.mpae-input-layout-grid td.energy-cell
+{
+	background-color: #F2F2F2;
+}
+
+.mpae-input-layout-grid td.percentage-cell div
+{
+	width: 44px;
+	padding: 2px;
+	margin: 0px;
+	overflow: hidden;
+}
+
+.mpae-input-layout-grid td.percentage-cell div .percentage-input
+{
+	width: 40px;
+	height: 
+	padding: 0px;
+	margin: 0px;
+	border-style: none;
+	border-width: 0px;
+}
+
+.mpae-input-layout-grid td.peak-cell div
+{
+	width: 64px;
+	padding: 2px;
+	margin: 0px;
+	overflow: hidden;
+}
+
+.mpae-input-layout-grid td.peak-cell div .peak-input
+{
+	width: 60px;
+	height: 
+	padding: 0px;
+	margin: 0px;
+	border-style: none;
+	border-width: 0px;
+}
+
+/* area allocation editor */
+
+.aae-header-panel td
+{
+	padding-top: 3px;
+	padding-left: 5px;
+}
+
+.aae-scroll-grid
+{
+	border-style: solid;
+	border-color: silver;
+	border-width: 1px;
+	border-collapse: collapse;
+}
+
+.aae-scroll-grid td
+{
+	height: 26px;
+	border-style: solid;
+	border-width: 1px;
+	padding: 0px;
+	text-align: center;
+	background-color: #F2F2F2;
+}
+
+.aae-scroll-grid td.aae-fixed-header-cell
+{
+}
+
+.aae-scroll-grid td.aae-fixedheader-cell div
+{
+	width: 240px;
+	height: 52px;
+	padding: 0px;
+	margin: 0px;
+	overflow: hidden;
+}
+
+.aae-fixed-header-layout-grid
+{
+	border-style: none;
+	border-color: silver;
+	border-width: 1px;
+	border-collapse: collapse;
+}
+
+.aae-fixed-header-layout-grid td.aae-alloc-year-header div
+{
+	width: 80px;
+	padding: 3px;
+	margin: 0px;
+	overflow: hidden;
+}
+
+.aae-fixed-header-layout-grid td.aae-alloc-year div
+{
+	height: 26px;
+	width: 80px;
+	padding: 3px;
+	margin: 0px;
+	overflow: hidden;
+}
+
+.aae-fixed-header-layout-grid td.aae-alloc-total div
+{
+	width: 85px;
+	padding: 3px;
+	margin: 0px;
+	overflow: hidden;
+}
+
+.aae-fixed-header-layout-grid td.aae-alloc-percent-total div
+{
+	width: 50px;
+	height: 26px;
+	padding: 3px;
+	margin: 0px;
+	overflow: hidden;
+}
+
+.aae-fixed-header-layout-grid td.aae-alloc-energy-total div
+{
+	width: 85px;
+	height: 26px;
+	padding: 3px;
+	margin: 0px;
+	overflow: hidden;
+}
+
+.aae-scroll-grid td.aae-header-cell
+{
+	height: 52px;
+}
+
+.aae-scroll-grid td.aae-header-cell div
+{
+	width: 65px;
+	padding: 0px;
+	margin: 0px;
+	overflow: hidden;
+}
+
+.aae-header-layout-grid
+{
+	border-style: none;
+	border-color: silver;
+	border-width: 1px;
+	border-collapse: collapse;
+}
+
+.aae-header-layout-grid td.aae-percentage-cell div
+{
+	width: 21px;
+	padding: 3px;
+	margin: 0px;
+	overflow: hidden;
+}
+
+.aae-row-header-layout-grid
+{
+	border-style: none;
+	border-color: silver;
+	border-width: 1px;
+	border-collapse: collapse;
+}
+
+.aae-row-header-layout-grid td.aae-alloc-year div
+{
+	height: 26px;
+	width: 80px;
+	padding: 3px;
+	margin: 0px;
+	overflow: hidden;
+}
+
+.aae-row-header-layout-grid td.aae-alloc-percent-total div
+{
+	width: 50px;
+	height: 26px;
+	padding: 3px;
+	margin: 0px;
+	overflow: hidden;
+}
+.aae-row-header-layout-grid td.aae-alloc-percent-total-warning div
+{
+	width: 50px;
+	height: 26px;
+	padding: 3px;
+	margin: 0px;
+	overflow: hidden;
+	background-color: red;
+}
+
+.aae-row-header-layout-grid td.aae-alloc-energy-total div
+{
+	width: 85px;
+	height: 26px;
+	padding: 3px;
+	margin: 0px;
+	overflow: hidden;
+}
+
+.aae-scroll-grid td.aae-input-cell
+{
+	height: 26px;
+}
+
+.aae-scroll-grid td.aae-input-cell div
+{
+	width: 122px;
+	padding: 0px;
+	margin: 0px;
+	overflow: hidden;
+}
+
+.aae-input-layout-grid
+{
+	border-style: none;
+	border-color: silver;
+	border-width: 1px;
+	border-collapse: collapse;
+}
+
+.aae-input-layout-grid td
+{
+	background-color: white;
+}
+
+.aae-input-layout-grid td.aae-energy-cell
+{
+	width: 40px;
+	padding: 1px;
+	margin: 0px;
+	overflow: hidden;
+	background-color: #F2F2F2;
+}
+
+.aae-input-layout-grid td.aae-energy-cell div
+{
+	width: 40px;
+	padding: 1px;
+	margin: 0px;
+	overflow: hidden;
+	background-color: #F2F2F2;
+}
+.aae-input-layout-grid td.aae-energy-label div
+{
+	width: 40px;
+	padding: 1px;
+	margin: 0px;
+	overflow: hidden;
+	background-color: #F2F2F2;
+}
+
+.aae-input-layout-grid td.aae-percentage-cell div
+{
+	width: 28px;
+	padding: 0px;
+	margin: 0px;
+	overflow: hidden;
+}
+
+.aae-input-layout-grid td.aae-percentage-cell div .aae-percentage-input
+{
+	width: 28px;
+	height: 
+	padding: 0px;
+	margin: 0px;
+	border-style: none;
+	border-width: 0px;
+}
+

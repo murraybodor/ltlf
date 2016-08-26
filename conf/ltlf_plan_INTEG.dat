@@ -1,0 +1,59 @@
+moduleType=ear
+applicationID=ltlf
+bindWebApp=default-web-site
+webSiteBindings=
+parent=default
+moduleID=.
+doctype=orion-application
+<?xml version="1.0" encoding="UTF-8"?>
+<orion-application xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://xmlns.oracle.com/oracleas/schema/orion-application-10_0.xsd">
+	<jazn provider="LDAP">
+	</jazn>
+	<web-module path="ltlf.war" id="ltlf">
+	</web-module>
+	<persistence path="persistence">
+	</persistence>
+	<log>
+		<file path="application.log" />
+	</log>	
+	<imported-shared-libraries> 
+		<remove-inherited name="apache.commons.logging"/> 
+	</imported-shared-libraries>
+	<data-sources path="data-sources.xml">
+	</data-sources>
+	<namespace-access>
+		<read-access>
+			<namespace-resource root="">
+				<security-role-mapping>
+					<group name="LTLF_USER"/>
+				</security-role-mapping>
+			</namespace-resource>
+		</read-access>
+		<write-access>
+			<namespace-resource root="">
+				<security-role-mapping>
+					<group name="LTLF_USER"/>
+				</security-role-mapping>
+			</namespace-resource>
+		</write-access>
+	</namespace-access>
+</orion-application>
+moduleID=data-sources
+doctype=data-sources
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<data-sources>
+  <managed-data-source connection-pool-name="ltlfPool" jndi-name="jdbc/ltlf" name="ltlfDataSource"/>
+  <connection-pool name="ltlfPool" initial-limit="10" max-connections="20" min-connections="5" validate-connection="true" validate-connection-statement="select * from dual">
+      <connection-factory factory-class="oracle.jdbc.pool.OracleDataSource" user="ltlf" password="1nt3g_ltlf" url="jdbc:oracle:thin:@aesodb6.aeso.ca:1521:elsii"/>
+  </connection-pool>
+</data-sources>
+moduleID=ltlf.war
+doctype=orion-web-app
+<?xml version="1.0" encoding="UTF-8"?>
+<orion-web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://xmlns.oracle.com/oracleas/schema/orion-web-10_0.xsd" context-root="ltlf">
+	<security-role-mapping name="LtlfUser">
+		<group name="LTLF_USER"/>
+	</security-role-mapping>
+	<web-app-class-loader search-local-classes-first="true" include-war-manifest-class-path="true">
+	</web-app-class-loader>
+</orion-web-app>
